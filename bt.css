@@ -1,0 +1,125 @@
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+
+#Workexp{
+	 display:none; 
+}
+
+#Academic{
+	 display:none;
+}
+
+#project{
+	 display:none;
+}
+.alert
+	{
+		font-size: 1.3em;
+		padding: 1em;
+		text-align: center;
+		white-space: nowrap;
+		width: auto;
+		word-wrap: normal;
+	}
+
+	
+.mypage-footer table{
+	
+	text-align:none;
+	color:white;
+	}
+	
+	.User{
+	clear:left;
+	background-color:#1d1e21;
+	margin:0;
+	padding:10px;
+	text-align:center;
+	color:white;
+	}
+	
+	.add{
+	text-decoration:none;
+	clear:left;
+	background-color:#555960;
+	margin:0;
+	padding:10px;
+	text-align:center;
+	color:white;
+	}
+	
+	.add ul li a:link{
+	text-decoration:none;
+	color:white;
+	}
+	
+	.mypage-footer{
+	clear:left;
+	background-color:#3f4247;
+	margin:0;
+	padding:10px;
+	text-align:center;
+	color:white;
+	
+	}
+	
+	.mypage-footer table{
+	
+	text-align:none;
+	color:white;
+	}
+	.ui-widget-content {
+	border: 1px solid #dddddd !important;
+	background-color: #fff !important;
+	color: #333333;
+	}
+	.ui-widget-header {
+	border: 1px solid #767a84 !important;
+    background: #767a84 !important;
+    color: #ffffff !important;
+    font-size:12px !important;
+	}
+
+	.navbar li :hover ,.navbar li :focus ,.navbar li a :active{
+	background-color: #000 !important;
+	}
+	.center_div{
+    margin: 0 auto;
+    width:80% 
+}
+	.show{
+		background-color:#008718;
+		color:white;
+		padding:3;
+		display: inline-flex;
+		text-align:center;
+	}
+	
+	.ui-widget-content {
+    background: #fff !important;
+        
+}
+.navbar-header li{float:left;
+margin-left:15px;
+display:none;}
+	
+		
+		

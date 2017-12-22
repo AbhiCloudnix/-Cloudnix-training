@@ -1,0 +1,508 @@
+<!doctype html>
+<html>
+<head>
+	<title> My resume </title>
+	
+	<style>
+	body{
+	background-image:url('image/2.jpg');
+	margin:0;
+	font-family:Arial;
+	}
+	
+	#Academic table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			
+		}
+
+	#Academic td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+	#Academic tr:nth-child(even) {
+			background-color: #dddddd;
+				
+		}
+	
+	
+	
+	.header{
+	background-color:#33001a;
+	margin:0;
+	text-align:center;
+	color:white;
+	padding: 50px;
+	
+    
+	}
+	
+	.mypage-header h1{
+	font-size:6px;
+	}
+	
+	.mypage-leftnav{
+	width:30%;
+	float:left;
+	margin-left:10px;
+	font-size:20px;
+	font-weight:bold;
+	height:900px;
+	}
+	
+	.mypage-leftnav #s1{
+	margin-top:80px;
+	border-radius: 50px 0px 50px 0px;
+    background: #33001a;
+    padding: 2px; 
+    width: 250px;
+    height: 20px;
+	text-align:center;
+	color:white;
+	}
+	
+	.mypage-leftnav #s2{
+	margin-top:120px;
+	border-radius: 50px 0px 50px 0px;
+    background: #4d0026;
+    padding: 2px; 
+    width: 250px;
+    height: 20px;
+	text-align:center;
+	color:white;
+	}
+	
+	.mypage-leftnav #s3{
+	margin-top:130px;
+	border-radius: 50px 0px 50px 0px;
+    background: #660033;
+    padding: 2px; 
+    width: 250px;
+    height: 20px;
+	text-align:center;
+	color:white;
+	}
+	
+	.mypage-leftnav #s4{
+	margin-top:200px;
+	border-radius: 50px 0px 50px 0px;
+    background: #800040;
+    padding: 2px; 
+    width: 250px;
+    height: 20px;
+	text-align:center;
+	color:white;
+	}
+	
+	.mypage-rightnav h2{
+	border-radius: 4px ;
+    background: #33001a;
+    padding: 5px; 
+    width: 300px;
+    height: 30px; 
+	margin-left:500px;
+	text-align:center;
+	color:white;
+	}
+	
+	.mypage-rightnav{
+	
+	}
+	.mypage-footer{
+	clear:left;
+	background-color:#cc0066;
+	margin:0;
+	padding:10px;
+	text-align:center;
+	color:white;
+	
+	}
+	
+	.mypage-footer table{
+	
+	text-align:none;
+	color:white;
+	}
+	
+	.User{
+	clear:left;
+	background-color:green;
+	margin:0;
+	padding:10px;
+	text-align:center;
+	color:white;
+	}
+	
+	.add{
+	text-decoration:none;
+	clear:left;
+	background-color:#cc0066;
+	margin:0;
+	padding:10px;
+	text-align:center;
+	color:white;
+	}
+	
+	.add ul li a:link{
+	text-decoration:none;
+	color:white;
+	}
+	
+	.ui-accordion .ui-accordion-content {
+    padding: 0px !important;
+    border-top: 0;
+    overflow: auto;
+   }
+    .ui-widget-header {
+    border: 1px solid #e78f08;
+    background: #33001a url(images/ui-bg_gloss-wave_35_f6a828_500x100.png) 50% 50% repeat-x !important;
+    
+	}
+
+	.alert
+	{
+		font-size: 1.3em;
+		padding: 1em;
+		text-align: center;
+		white-space: nowrap;
+		width: auto;
+		word-wrap: normal;
+	}
+	
+	#center-page{font-size: 14px;}
+     .ui-widget-header {
+            background:#b9cd6d;
+            border: 1px solid #b9cd6d;
+            color: #FFFFFF;
+            font-weight: bold;
+         }
+	
+		
+	</style>
+	<script>
+	
+		
+	 function Saveinfo()
+			{
+			var username=document.getElementById("username").value;
+			var Address=document.getElementById("address").value;
+			
+			
+			
+			document.cookie=username+"="+  Address  ;
+			document.getElementById("abc").innerHTML=document.cookie;
+			
+			}
+			
+     function loadinfo()
+			{
+			
+			myCookies={};
+			var kv= document.cookie.split("=");
+			
+			document.getElementById("cookieName").innerHTML=kv[0];
+			document.getElementById("cookieAddress").innerHTML=kv[1];
+			} 
+	
+	
+			 
+		
+		
+		
+	 function max()
+			 {
+			 var a=document.getElementById("val1").value;
+			 var b=document.getElementById("val2").value;
+				 if(a > b)
+				 {
+				 document.getElementById("solMax").innerHTML = a;
+				 }
+				 else
+				 {
+				 document.getElementById("solMax").innerHTML = b;
+				 }
+			 
+			 }
+			 
+	function reverse()
+			 {
+			 var a=document.getElementById("str").value;
+			 var x=a.length;
+			 var strg="";
+				 for(i=x-1; i>=0; i--)
+				 {
+				 strg+=a.charAt(i);
+				 }
+			 document.getElementById("reverse").innerHTML=strg;
+			 }
+			 
+	function findLongestWord() {
+		  
+			  var stringArray = [];
+			  var string = document.getElementById("sen").value;
+			  stringArray = string.split(' ');
+			  stringArray.sort();
+			  var longest=stringArray[0];
+			  for (i = 1; i < stringArray.length; i++){
+				if(stringArray[i].length>longest.length)
+				{
+				longest=stringArray[i];
+				}
+
+			  }
+			  document.getElementById("longw").innerHTML=longest;
+		   
+
+		}
+	
+	
+	
+	</script>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+        $(".add").append('<div><ul><li ><a href="www.google.com">Google</a></li><li><a href="www.youtube.com">Youtube</a></li><li><a href="www.gmail.com">Gmail</a></li></ul></div>');  
+});
+
+
+$(document).ready(function(){
+    $(".add").hover(function(){
+		 $(".mypage-footer").slideDown(10000, function() {
+		alert("Animation Complete");
+	})
+	    
+    }); 
+});
+
+
+
+</script>	
+
+<!-- Jquery UI Links-->
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+<!-- Jquery UI codes-->
+<script>
+         
+		 
+	$(document).ready(function() {
+		$("#accordion-1").show().accordion({
+			autoHeight: false
+		});
+		$("#accordion-1 div").css({ 'height': 'auto' });
+		
+	});  
+	$(function() {
+		$( "#but1" ).button({
+				   icons: {
+					  primary: "ui-icon-circle-triangle-e",
+					  
+				   }
+				});
+		$( "#but2" ).button({
+				   icons: {
+					  primary: "ui-icon-arrowthick-1-w",
+					  
+				   }
+				});
+		$( "#but3" ).button({
+				   icons: {
+					  primary: " ui-icon-transfer-e-w",
+					  
+				   }
+				});
+		});
+		
+	$(function() {
+            $( "#datepicker" ).datepicker();
+         });
+		 
+	
+	window.old_alert = window.alert;
+	window.alert = function(message, fallback){
+		if(fallback)
+		{
+			old_alert(message);
+			return;
+		}
+		$(document.createElement('div'))
+			.attr({title: 'Alert', 'class': 'alert'})
+			.html(message)
+			.dialog({
+				buttons: {
+							"Ok": function() {
+								$(this).dialog("close");
+								okAction();
+							},
+							"Cancel": function() {
+								$(this).dialog("close");
+							}
+						},
+				close: function(){$(this).remove();},
+				draggable: true,
+				modal: true,
+				resizable: false,
+				width: 'auto'
+			});
+	};
+	
+	$(function() {
+            $( "#center-page" ).tabs({
+               event:"mouseover"
+            });
+         });
+		 
+	$(function() {
+            var availableTutorials  =  [
+               "Freedom is not a thing, so it cannot be seen it can be felt only",
+               "Freedom is not to be free from any ruler however it is to be free from all the boundations whether they are physical, social, political, psychological or intellectual.",
+               "Freedom is worth if it makes people happy physically, mentally, socially, and psychologically.",
+               "As being youth we only believe in truth that we are force to change country’s fortune.",
+			   "Do not see the colors our national flag has, feel the meaning it reveals behind.",
+               "In true sense, freedom is being free of diseases, greediness and filthy mind.",
+               "Tiranga, which we unfurl on Republic Day, indicates our freedom.",
+               "It is our pleasure to celebrate Republic Day every year.",
+            ];
+            $( "#sen" ).autocomplete({
+               source: availableTutorials
+            });
+         });
+			 
+</script>
+	
+	
+</head>
+
+<body >
+
+<div id="accordion-1">
+	 <h3>Header</h3>
+	  <div >
+	 
+		
+		<!-- Header-->
+		
+		<div class="header">
+			<h1 id="cookieName"  >ABHIMANYU KUMAR</h1>
+		</div>
+	 </div>
+	 <!-- CENTER-->
+	 <h3>Middle</h3>
+	 <div>
+		
+		
+		
+		<div id = "center-page">
+         <ul>
+            <li><a href = "#obj">Objective</a></li>
+            <li><a href = "#Academic">Education</a></li>
+            <li><a href = "#Workexp">Work Experience</a></li>
+			<li><a href = "#project">Projects</a></li>
+         </ul> 
+         
+		
+
+		<div id="obj">
+		<p id="d1">To work in a healthy, innovative and challenging environment extracting the best out of me, which is
+					best to learn and grow at professional as well as personal level thereby directing my future as an asset
+					to the organization.</p><br>
+		</div >				
+		<div id = "Academic">				
+		<p id="d2"><table >
+						<tr>
+							<th>Acedemic Qualification</th>
+							<th>College</th>
+							<th>Percentage</th>
+						</tr>
+						<tr>
+							<td>10<sup>th</sup></td>
+							<td>Vivekanada Vidya Mandir</td>
+							<td>65%</td>
+							
+						</tr>
+						<tr>
+							<td>12<sup>th</sup></td>
+							<td>Vivekanada Vidya Mandir</td>
+							<td>71%</td>
+							
+						</tr>
+						<tr>
+							<td>B.tech</td>
+							<td>Suresh gyan Vihar</td>
+							<td>70%</td>
+							
+						</tr>
+					</table></p>
+					<br><br>
+		</div >			
+		<div id = "Workexp">			
+		<p id="d3">Fresher</p><br><br>
+		</div >
+		<div id = "project">
+		<p id="d4"><p><b>Jharkhand Tour and Travels | 2016 Jan-June</b></p>
+						<p>Jharkhand tour is website which will be used by any person to know about the
+						Jharkhand and which tourist places are available to see in Jharkhand. It also show
+						the different packages for the tour, include the price, date and places. It also
+						include the different travel agency available in Jharkhand and also show their
+						individual package available at that travel company.</p>
+						
+						<p><b>Image Hiding System | 2015 July-Dec</b></p>
+						<p>This project is developed for hiding information in any image file. The scope of the
+						project is implementation of information hiding system tools for hiding
+						information includes any type of information file and image files and the path
+						where the user wants to save image and extruded file.</p>
+						
+						<p><b>Online Stationary Shopping | 2014 Jan-June</b></p>
+						<p>A online shopping Site which will be used by any person but mainly for the
+						student of any college or university so that they can get any stationary product
+						any time.</p></td></p>
+
+		</div>
+	</div>
+		
+	 </div>
+	 <h3>footer</h3>
+	 <div>
+
+		<!-- beforeFooter-->
+		<div class="add"></div>
+
+
+		<!-- Footer-->
+		<div class="mypage-footer">
+		<h2>Contact info</h2><br><center>
+		Mobile No.9973805930<br>
+		Email: abhi.kr.9206@gmail.com</td>
+		</center>
+
+		</div>
+
+
+		<!-- UserInterface-->
+		<div class="User">
+		<h2>Enter Particulars</h2>
+			Value 1:<input type="text" id="val1"/> &nbsp &nbsp
+			Value 2:<input type="text" id="val2"/> &nbsp &nbsp
+			<button  id = "but1" type="button" onclick="max()">Find Max</button> &nbsp &nbsp<span id="solMax" ></span><br><br>
+			
+			Enter String:<input type="text" id="str"/> &nbsp &nbsp
+			<button id = "but2" type="button" onclick="reverse()">Reverse</button> &nbsp &nbsp <span id="reverse" ></span><br><br>
+			
+			Enter Sentence:<input type="text" id="sen"> &nbsp &nbsp
+			<button id = "but3" type="button" onclick="findLongestWord()">Longest Word</button> &nbsp &nbsp <span id="longw" ></span><br><br>
+			
+			Enter Date: <input type = "text" id = "datepicker"></p><br><br>
+			
+		</div>
+		
+	</div>
+
+</div>
+</body>
+</html>
